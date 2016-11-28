@@ -1,5 +1,5 @@
 require ("parcel")
-require "rspec"
+require ("rspec")
 
 describe(Parcel) do
   describe('#wieght_cost') do

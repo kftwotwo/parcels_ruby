@@ -1,15 +1,14 @@
 class Parcel
-  $sum_total = 0
-  def initialize(wieght, width, hieght, length, miles)
+  def initialize(wieght, width, height, length, miles)
     @wieght = wieght
     @width =  width
-    @hieght = hieght
+    @height = height
     @length = length
     @miles = miles
   end
   def total
-   (@wieght * 2) + (@width * @hieght * @length /100) + (@miles * 0.5)
-  end
+  @@sum_total = (@wieght * 2) + (@width * @height * @length /100) + (@miles * 0.5)
+   end
 end
 
 #  REFACTOR!!!
