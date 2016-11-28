@@ -15,7 +15,7 @@ get('/shipping') do
   @miles = (params.fetch('miles')).to_i
   @air = params.has_key?('air')
   if @air == true
-    @miles += 10
+    @miles += 100
   end
   @parcel = Parcel.new(wieght, width, height, length, @miles).total()
   erb(:result)
