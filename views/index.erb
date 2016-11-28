@@ -1,17 +1,25 @@
 <form action="shipping">
   <div class="form-group">
-    <label>How much does it weight? (in pounds)</label>
-    <input type="text" name="wieght"><br>
+    <label>How much does your package weigh? (in pounds please)</label>
+    <input type="text" name="wieght" class="form-control" placeholder="Total Weight"><br>
 
-    <label>How big is the box? (inches)</label><br>
-    Width <input type="text" name="width"><br>
-    Height <input type="text" name="height"><br>
-    Length <input type="text" name="length"><br>
+      <div class="row">
+        <label>How big is the box? (inches)</label><br>
+        <div class="col-md-4">
+          Width <input type="text" name="width" class="form-control" placeholder="Width"><br>
+        </div>
+        <div class="col-md-4">
+          Height <input type="text" name="height" class="form-control" placeholder="Height"><br>
+        </div>
+        <div class="col-md-4">
+          Length <input type="text" name="length" class="form-control" placeholder="Length" ><br>
+        </div>
+      </div>
 
-    <label>Where is it going? (in miles)</label>
-    <input type="text" name="miles"><br>
+    <label>Where is it going? (miles)</label>
+    <input type="text" name="miles" class="form-control" placeholder="Miles"><br>
 
-    <label>Check which one you want!</label>
+    <label>Select your shippin' preference</label>
     <p>Ground (free)</p>
     <input type="checkbox" name="ground">
     <p>Air (faster)</p>
@@ -19,6 +27,6 @@
 
     <p>Gift Wrap?</p>
     <input type="checkbox" name="gift"><br>
-    <button type="submit">Submit</button>
+    <button type="submit" class="btn-lg btn-primary">SHIP</button>
   </div>
 </form>
