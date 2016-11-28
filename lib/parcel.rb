@@ -7,7 +7,7 @@ class Parcel
     @miles = miles
   end
   def total
-  @@sum_total = (@wieght * 2) + (@width * @height * @length /100) + (@miles * 0.5)
+  @@sum_total = (@wieght * 0.07) + (@width * @height * @length /200) + (@miles * 0.02)
    end
 end
 
