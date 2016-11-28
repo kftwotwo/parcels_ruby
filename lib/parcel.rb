@@ -14,4 +14,8 @@ class Parcel
   def size_cost
      @width * @hieght * @length /100
   end
+
+  def mile_cost
+    @miles * 0.5 
+  end
 end

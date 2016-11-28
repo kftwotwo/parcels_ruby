@@ -16,10 +16,10 @@ describe(Parcel) do
     end
   end
 
-  describe('#size_cost') do
-    it "will return the cost based on parcel size" do
-      new_size = Parcel.new(0, 12 ,12, 12, 0)
-      expect(new_size.size_cost()).to(eq(17))
+  describe('#mile_cost') do
+    it "will return the cost based on mileage" do
+      new_mileage = Parcel.new(0, 0 ,0, 0, 53)
+      expect(new_mileage.mile_cost()).to(eq(26.5))
     end
   end
 end
