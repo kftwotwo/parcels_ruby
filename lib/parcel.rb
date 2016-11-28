@@ -6,16 +6,20 @@ class Parcel
     @length = length
     @miles = miles
   end
-
-  def wieght_cost
-    @wieght * 2
+  def total
+    (@wieght * 2) + (@width * @hieght * @length /100) + (@miles * 0.5)
   end
 
-  def size_cost
-     @width * @hieght * @length /100
-  end
-
-  def mile_cost
-    @miles * 0.5 
-  end
+  #  REFACTOR!!!
+  # def wieght_cost
+  #   @wieght * 2
+  # end
+  #
+  # def size_cost
+  #    @width * @hieght * @length /100
+  # end
+  #
+  # def mile_cost
+  #   @miles * 0.5
+  # end
 end
