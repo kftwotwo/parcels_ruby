@@ -1,4 +1,5 @@
 class Parcel
+  $sum_total = 0
   def initialize(wieght, width, hieght, length, miles)
     @wieght = wieght
     @width =  width
@@ -7,19 +8,19 @@ class Parcel
     @miles = miles
   end
   def total
-    (@wieght * 2) + (@width * @hieght * @length /100) + (@miles * 0.5)
+   (@wieght * 2) + (@width * @hieght * @length /100) + (@miles * 0.5)
   end
-
-  #  REFACTOR!!!
-  # def wieght_cost
-  #   @wieght * 2
-  # end
-  #
-  # def size_cost
-  #    @width * @hieght * @length /100
-  # end
-  #
-  # def mile_cost
-  #   @miles * 0.5
-  # end
 end
+
+#  REFACTOR!!!
+# def wieght_cost
+#   @wieght * 2
+# end
+#
+# def size_cost
+#    @width * @hieght * @length /100
+# end
+#
+# def mile_cost
+#   @miles * 0.5
+# end
