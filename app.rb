@@ -12,7 +12,11 @@ get('/shipping') do
   width = (params.fetch('width')).to_i
   height = (params.fetch('height')).to_i
   length = (params.fetch('length')).to_i
-  miles = (params.fetch('miles')).to_i
-  @parcel = Parcel.new(wieght, width, height, length, miles).total()
+  @miles = (params.fetch('miles')).to_i
+  @air = params.has_key?('air')
+  if @air == true
+    @miles += 10
+  end
+  @parcel = Parcel.new(wieght, width, height, length, @miles).total()
   erb(:result)
 end
