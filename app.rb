@@ -13,6 +13,7 @@ get('/shipping') do
   height = (params.fetch('height')).to_i
   length = (params.fetch('length')).to_i
   @miles = (params.fetch('miles')).to_i
+  puts params
   @air = params.has_key?('air')
   if @air == true
     @miles += 100
