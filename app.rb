@@ -15,13 +15,6 @@ get('/shipping') do
   @miles = (params.fetch('miles')).to_i
   @air = params.has_key?('air')
   @gift = params.has_key?('gift')
-  # if @air == true
-  #   @miles += 100
-  # end
-  #
-  # if @gift == true
-  #   @width & @length & @height += 10
-  # end
   @parcel = Parcel.new(wieght, @width, @height, @length, @miles).total()
   erb(:result)
 end

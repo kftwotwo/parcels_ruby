@@ -29,4 +29,25 @@ describe(Parcel) do
       expect(new_parcel.total_mile_cost(1)).to(eq(0.02))
     end
   end
+
+  describe('#shipping_options') do
+    it "will have addtional for shippping options" do
+      new_parcel = Parcel.new(53)
+      expect(new_parcel.shipping_options(1)).to(eq(0.3))
+    end
+  end
+
+  describe('#wrapping_option') do
+    it "will have addtional charge for gift wrap" do
+      new_parcel = Parcel.new(22)
+      expect(new_parcel.wrapping_option(1)).to(eq(0.8))
+    end
+  end
+
+  describe('#total') do
+    it "will return the total" do
+      new_parcel = Parcel.new(1, 1, 1)
+      expect(new_parcel.total(10, 12, 11)).to(eq(33))
+    end
+  end
 end
